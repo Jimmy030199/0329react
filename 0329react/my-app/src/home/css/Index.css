@@ -1,0 +1,321 @@
+header .container {
+  padding: 5vh 0;
+}
+
+.sm-header {
+  background: linear-gradient(180deg, #fba299 0%, #f3ae62 100%);
+  height: 91vh;
+}
+
+.sm-header img {
+  width: 10rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sm-header {
+    background: transparent;
+    height: 100vh;
+  }
+}
+
+/**卡片翻轉 */
+.card-flip-1,
+.card-flip-2 {
+  padding: 0 1rem;
+}
+
+.card-flip-1,
+.front-1,
+.back-1 {
+  height: 50vh;
+  width: 100%;
+}
+
+.card-flip-2,
+.front-2,
+.back-2 {
+  height: 90vh;
+  width: 100%;
+  /* padding: 0 1rem; */
+}
+
+.cardbox {
+  transform-style: preserve-3d;
+  /* perspective: 1000px; */
+  position: relative;
+  transition: 2s;
+  cursor: pointer;
+}
+
+/* .cardbox:hover .back-1,
+.cardbox:hover .back-2 {
+  transform: rotateY(180deg);
+} */
+
+.front-1,
+.front-2,
+.back-1,
+.back-2 {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front-1,
+.front-2 {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back-1,
+.back-2 {
+  transform: rotateY(180deg);
+  /* object-fit: cover; */
+}
+
+.cardbox-1 {
+  animation: flipper 19s infinite;
+}
+
+.cardbox-2 {
+  animation: flipper 19s 9s infinite;
+}
+.cardbox-3 {
+  animation: flipper 19s 6s infinite;
+}
+.cardbox-4 {
+  animation: flipper 19s 3s infinite;
+}
+.cardbox-5 {
+  animation: flipper 19s 12s infinite;
+}
+
+.cardf-1 {
+  background: linear-gradient(180deg, #eea880 10.94%, #e4b3fb 100%);
+  text-align: center;
+  padding-top: 7rem;
+}
+
+.cardf-2 {
+  background: linear-gradient(
+    180deg,
+    #d9d9d9 0%,
+    #7ae9ce 0.01%,
+    #f4c974 75.52%
+  );
+  text-align: center;
+  padding-top: 24rem;
+}
+
+.cardf-2 img {
+  transform: rotate(180deg);
+}
+
+.cardf-3 {
+  background: linear-gradient(180deg, #fca1a1 0%, #f3af5f 100%);
+}
+.cardf-4 {
+  background: linear-gradient(180deg, #8cc7e8 0%, #b6eb44 100%);
+}
+.cardf-5 {
+  padding-top: 3rem;
+  background: linear-gradient(180deg, #f27aa5 0%, #fea3c4 0.01%, #b0e4ef 100%);
+}
+
+.cardb-1 img {
+  object-position: 26%;
+  height: 50vh;
+}
+
+.cardb-2 img {
+  object-position: 33%;
+  height: 90vh;
+}
+
+.cardb-3 img {
+  object-fit: cover;
+  object-position: 53%;
+  height: 50vh;
+}
+.cardb-4 img {
+  object-position: 40%;
+  height: 90vh;
+}
+.cardb-5 img {
+  object-position: 62%;
+  height: 50vh;
+}
+
+.cardb-1 img,
+.cardb-2 img,
+.cardb-3 img,
+.cardb-4 img,
+.cardb-5 img {
+  object-fit: cover;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+@keyframes flipper {
+  0% {
+    transform: rotateY(0deg);
+  }
+  5% {
+    transform: rotateY(0deg);
+  }
+  15% {
+    transform: rotateY(180deg);
+  }
+  25% {
+    transform: rotateY(0deg);
+  }
+  40% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  65% {
+    transform: rotateY(0deg);
+  }
+  75% {
+    transform: rotateY(0deg);
+  }
+  85% {
+    transform: rotateY(180deg);
+  }
+  95% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.intro-img img {
+  width: 100%;
+  height: 9rem;
+  object-fit: contain;
+}
+/* 消息 */
+.news-info {
+  width: 100%;
+}
+
+.news-info li {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #fff;
+}
+
+.news-info li:last-child {
+  border-bottom: 0px solid #fff;
+}
+
+.news-info a {
+  transition: 0.5s;
+}
+.news-info a:hover {
+  color: #25858b;
+}
+
+.news-img {
+  position: absolute;
+  top: -3rem;
+  right: 5rem;
+}
+
+.news-img img {
+  width: 100%;
+  height: 10rem;
+  object-fit: contain;
+}
+
+.me-10 {
+  margin-right: 15rem;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .news-img img {
+    width: 100%;
+    height: 18rem;
+    object-fit: contain;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .news-info {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .news-img img {
+    width: 100%;
+    height: 23rem;
+    object-fit: contain;
+  }
+}
+
+.cardc-1,
+.cardc-2,
+.cardc-3,
+.cardc-4 {
+  height: 33rem;
+  padding: 2.5rem;
+  /* margin: 0 1rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 20rem;
+}
+
+.cardc-1 {
+  background: linear-gradient(180deg, #ffabab 0%, #f24747 100%);
+  border-radius: 150px 150px 0 0;
+}
+.cardc-2 {
+  background: linear-gradient(180deg, #bd61cc 0%, #6eb7c8 100%);
+
+  border-radius: 0 0 150px 150px;
+}
+.cardc-3 {
+  background: linear-gradient(0deg, #96b536 0%, #abdae4 98.39%);
+
+  border-radius: 150px 150px 0 0;
+}
+.cardc-4 {
+  background: linear-gradient(0deg, #fee074 0%, #f25555 100%);
+  border-radius: 0 0 150px 150px;
+}
+
+.cardc-1-img img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  object-position: 25%;
+  border-radius: 180px;
+}
+
+.cardc-2-img img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  object-position: 48%;
+  border-radius: 180px;
+}
+
+.cardc-3-img img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  object-position: 6%;
+  border-radius: 180px;
+}
+
+.cardc-4-img img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  object-position: 78%;
+  border-radius: 180px;
+}
